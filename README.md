@@ -28,6 +28,7 @@ Any of the methods that return an integer will return one of the corresponding v
 `ALSUCCESS`: the method was successful<br />
 `RMNODATA`: a remove was called, but there was no data in the list<br />
 `ALIDXOOR`: Index Out Of Range<br />
+The `get` method will return a null pointer if the index is out of bounds.
 
 ## Constructors ##
 Both of these functions require the size of data type to be stored and will return a pointer to the struct ArrayList that is malloc'd.
