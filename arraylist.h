@@ -19,8 +19,8 @@ typedef struct{
     void (*free)();
 } ArrayList;
 
-ArrayList *newArrayList( int data_size );
-ArrayList *newArrayListSized( int data_size, int initial_length );
+ArrayList *newArrayList( size_t data_size );
+ArrayList *newArrayListSized( size_t data_size, size_t initial_length );
 int ArrayList__getoffset( ArrayList *list, int index );
 int ArrayList_add( ArrayList *list, void *data );
 int ArrayList_remove( ArrayList *list, int index );
