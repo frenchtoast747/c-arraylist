@@ -32,13 +32,11 @@ The `get` method will return a null pointer if the index is out of bounds.
 Both of these functions require the size of data type to be stored and will return a pointer to the struct ArrayList that is malloc'd.
 
 ```
-#!c
 ArrayList *newArrayList( size_t data_size );
 ```
 Returns a pointer to the malloc'd ArrayList struct using a default max size of 10 items.
 
 ```
-#!c
 ArrayList *newArrayListSized( size_t data_size, size_t initial_length );
 ```
 If the size of an array is known, use the initial length argument to set the initial max length of the array. Returns a pointer to the malloc'd ArrayList struct.
@@ -50,7 +48,6 @@ Assume that for each method there is already an allocated struct:
 
 ### int add( ArrayList *list, void *data ); ###
 ```
-#!c
 // Example
 int data = 10;
 list->add( list, &data );
@@ -59,7 +56,6 @@ Adds (copies) the data pointed to by ```data``` to the next open space in the ar
 
 ### int remove( ArrayList *list, int index ); ###
 ```
-#!c
 // Example
 list->remove( list, 10 );
 ```
@@ -67,7 +63,6 @@ Removes an item from the array at index `index`.
 
 ### void \*get( ArrayList *list, int index ); ###
 ```
-#!c
 // Example
 int *data;
 data = list->get( list, 2 );
@@ -78,7 +73,6 @@ Returns a void pointer to the item in array index ```index```.
 
 ### set( ArrayList *list, int index, void *data ); ###
 ```
-#!c
 // Example
 int data = 42;
 list->set( list, 13, &data );
@@ -87,7 +81,6 @@ Copies the value at from  ```data``` to ```index```.
 
 ### free( ArrayList *list ); ###
 ```
-#!c
 // Example
 list->free( list );
 ```
