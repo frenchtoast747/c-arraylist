@@ -8,8 +8,6 @@ An arraylist (dynamic array) written in C.
 ## Synopsis ##
 
 ```
-#!c
-#include "arraylist.h"
 
 typedef struct{
     size_t data_size;
