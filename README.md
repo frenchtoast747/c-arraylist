@@ -57,7 +57,7 @@ Assume that for each method there is already an allocated struct:
 int data = 10;
 list->add( list, &data );
 ```
-Adds the data pointed to by ```data``` to the next open space in the array.
+Adds (copies) the data pointed to by ```data``` to the next open space in the array.
 
 ### int remove( ArrayList *list, int index ); ###
 ```
@@ -85,7 +85,7 @@ Returns a void pointer to the item in array index ```index```.
 int data = 42;
 list->set( list, 13, &data );
 ```
-Sets the value at index ```index``` to ```data```.
+Copies the value at from  ```data``` to ```index```.
 
 ### free( ArrayList *list ); ###
 ```
