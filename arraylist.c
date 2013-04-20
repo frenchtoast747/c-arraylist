@@ -13,10 +13,10 @@
   to calculate the index in memory and allows for this list
   to be reused with multiple data types.
  */
-ArrayList *newArrayList( int data_size ){
+ArrayList *newArrayList( size_t data_size ){
     return newArrayListSized( data_size, 10 );
 }
-ArrayList *newArrayListSized( int data_size, int initial_length ){
+ArrayList *newArrayListSized( size_t data_size, size_t initial_length ){
     ArrayList *list = malloc( sizeof( ArrayList ) );
     list->data_size = data_size;
     list->max_length = initial_length;
@@ -130,4 +130,5 @@ void ArrayList__realloc( ArrayList *list ){
 void ArrayList_free( ArrayList *list ){
     free( list->array );
     free( list );
+    list = NULL;
 }
